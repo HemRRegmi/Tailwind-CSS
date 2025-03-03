@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <article class="max-w-lg w-full bg-white shadow-lg rounded-lg overflow-hidden md:flex md:max-w-2xl">
+        <!-- Image Slider Section -->
+        <figure class="md:w-1/2 relative overflow-hidden">
+            <div class="slider">
+                <img src="pictures/the-north-face-womens-half-dome-pullover-hoodie.jpg" alt="Hoodie 1"
+                    class="slider-image">
+                <img src="pictures/The-North-Face-Geo-NSE-Hoodie---Men-s-Almond-Butter---Coal-Brown-L.png"
+                    alt="Hoodie 2" class="slider-image">
+                <img src="pictures/images.jpg" alt="Hoodie 3" class="slider-image">
+                <img src="pictures/78772530_066_b.webp" alt="Hoodie 4" class="slider-image">
+            </div>
+        </figure>
+
+        <!-- Content Section -->
+        <section class="p-6 md:w-1/2 flex flex-col justify-between">
+            <h2 class="text-2xl font-bold text-gray-900">The North Face Hoodie</h2>
+            <p class="text-gray-600 mt-2">Stay stylish and comfortable with this premium hoodie from The North Face.</p>
+            <p class="text-lg font-semibold text-gray-800 mt-4">$89.99</p>
+            <button
+                class="mt-4 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 active:bg-blue-800 transition">Add
+                to Cart</button>
+        </section>
+    </article>
+
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll(".slider-image");
+        function changeImage() {
+            images.forEach(img => img.style.display = "none");
+            images[index].style.display = "block";
+            index = (index + 1) % images.length;
+        }
+        setInterval(changeImage, 3000);
+        changeImage();
+    </script>
+</body>
+
+</html>

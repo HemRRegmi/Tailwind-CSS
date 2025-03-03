@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+button {
+  transition: transform 0.5s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.25);
+}/*# sourceMappingURL=style.css.map */
